@@ -40,7 +40,6 @@ def clean_description(description_jaljal):
     不要な文字を削除する
     """
 
-    # \nの文字削除
     description_jaljal1 = description_jaljal.replace("\n", "")
     
     description_jaljal2 = description_jaljal1.replace("*", "")

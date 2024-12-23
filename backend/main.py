@@ -1,13 +1,22 @@
 from typing import List
 from fastapi import FastAPI
 from openai import OpenAI
-
+from fastapi.middleware.cors import CORSMiddleware
 
 from request import MessageRequestBody
 from response import MessageResponseBody
 from chatgpt import recomend_response, clean_description, get_url, true_get_url, description_change
 
 app = FastAPI()
+
+# CORSの設定を追加
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 必要に応じて特定のドメインに制限する
+    allow_credentials=True,
+    allow_methods=["*"],  # 全てのHTTPメソッドを許可
+    allow_headers=["*"],  # 全てのヘッダーを許可
+)
 
 @app.post("/spi/jaljal", response_model = MessageResponseBody)
 def jaljal_question(requests: List[MessageRequestBody]):

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ジャルジャルのおすすめ動画</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>ジャルジャルおすすめネタ</h1>
+        <p>見たい動画を入力または選択して検索しましょう！</p>
+    </header>
+    <main>
+        <section id="input-section">
+            <form id="searchForm">
+                <textarea id="searchInput" placeholder="例: ジャルジャルのおすすめ動画を教えて下さい。"></textarea>
+                <button type="submit">検索</button>
+            </form>
+        </section>
+        <section id="button-section">
+            <button class="category-btn" data-category="理不尽">理不尽</button>
+            <button class="category-btn" data-category="屁">屁</button>
+            <button class="category-btn" data-category="女装">女装</button>
+        </section>
+        <section id="results">
+            <h2>おすすめ動画</h2>
+            <div id="description"></div>
+            <div id="video-list"></div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
